@@ -3,3 +3,9 @@
 /workspace.xml
 /*.idea
 /*.class
+/SourceCode.iml
+/compiler.xml
+/jarRepositories.xml
+/misc.xml
+/modules.xml
+/vcs.xml
