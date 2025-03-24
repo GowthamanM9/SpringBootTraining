@@ -1,4 +1,4 @@
-package com.demo.spring.day1.afternoon;
+package com.demo.spring.day1.afternoon.basic;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
