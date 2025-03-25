@@ -10,7 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = "com.demo.spring.day1.afternoon.jdbc")
+@ComponentScan(basePackages = "com.demo.spring.afternoon.jdbc1")
 public class JdbcAppConfig {
 
     @Bean

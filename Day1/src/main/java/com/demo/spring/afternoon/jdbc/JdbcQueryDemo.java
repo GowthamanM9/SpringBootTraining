@@ -1,4 +1,4 @@
-package com.demo.spring.day1.afternoon.jdbc;
+package com.demo.spring.afternoon.jdbc;
 
 import java.sql.*;
 

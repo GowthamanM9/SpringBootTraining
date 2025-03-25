@@ -1,4 +1,4 @@
-package com.demo.spring.day1.afternoon.basic;
+package com.demo.spring.afternoon.basic;
 
 public class Book {
     private final String BkNo;
