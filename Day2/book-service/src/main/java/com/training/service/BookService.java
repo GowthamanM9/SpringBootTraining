@@ -1,7 +1,8 @@
 package com.training.service;
 
 import com.training.dao.Book;
-import com.training.dao.BookNotExistException;
+import com.training.exception.BookExistsException;
+import com.training.exception.BookNotExistException;
 import com.training.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,14 @@ public class BookService {
             return bookOp.get();
         } else {
             throw new BookNotExistException("Book with " + isbn + " not found.");
+        }
+    }
+
+    public Book saveBook(Book book) {
+        if (bookRepository.existsById(book.getIsbn())) {
+            throw new BookExistsException("The Book Exists...");
+        } else {
+            return bookRepository.save(book);
         }
     }
 }

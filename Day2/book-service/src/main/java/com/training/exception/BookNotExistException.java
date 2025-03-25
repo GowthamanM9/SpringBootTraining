@@ -1,4 +1,4 @@
-package com.training.dao;
+package com.training.exception;
 
 public class BookNotExistException extends RuntimeException {
 
