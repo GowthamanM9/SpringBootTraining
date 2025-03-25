@@ -1,0 +1,14 @@
+**.prefs
+**.class
+settings.json
+.classpath
+.project
+Day2/book-service/.gitattributes
+Day2/book-service/mvnw.cmd
+Day2/book-service/mvnw
+Day2/.idea/vcs.xml
+Day2/.idea/misc.xml
+Day1/.classpath
+Day1/.project
+Day2/.idea/.gitignore
+Day1/.classpath
