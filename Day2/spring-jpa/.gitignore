@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/.idea/encodings.xml
+/src/main/java/org/training/JpaInsert.java
+/.idea/misc.xml
+/.idea/vcs.xml
