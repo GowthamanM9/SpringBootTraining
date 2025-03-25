@@ -3,6 +3,7 @@ package org.training.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -14,6 +15,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan(basePackages = "org.training")
+@EnableJpaRepositories(basePackages = "org.training.repository",entityManagerFactoryRef = "entityManagerFactoryBean")
 public class JpaAppConfig {
     @Bean
     public DataSource dataSource() {

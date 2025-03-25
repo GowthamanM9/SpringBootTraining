@@ -1,0 +1,21 @@
+package org.training.service;
+
+import org.springframework.stereotype.Service;
+import org.training.dao.Book;
+import org.training.repository.BookRepository;
+
+@Service
+public class BookService {
+
+    private BookRepository bookRepository;
+
+    public BookService(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
+
+    public void showAllBooks() {
+        for (Book book : bookRepository.findAll()) {
+            System.out.println(book);
+        }
+    }
+}
