@@ -12,3 +12,7 @@ Day1/.classpath
 Day1/.project
 Day2/.idea/.gitignore
 Day1/.classpath
+Day3/rest-client/mvnw.cmd
+Day3/rest-client/.mvn/wrapper/maven-wrapper.properties
+Day3/rest-client/mvnw
+Day3/rest-client/.gitattributes

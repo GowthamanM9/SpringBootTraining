@@ -2,6 +2,8 @@ package com.training.controller;
 
 import com.training.dao.Book;
 import com.training.service.BookService;
+import com.training.util.ResponseMessage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +32,17 @@ public class BookController {
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public  ResponseEntity<Book> addBook(@RequestBody Book book){
-        return  ResponseEntity.ok(bookService.saveBook(book));
+    public ResponseEntity<Book> addBook(@RequestBody Book book) {
+        return ResponseEntity.ok(bookService.saveBook(book));
+    }
+
+    @DeleteMapping(path = "/{isbn}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ResponseMessage> deleteBook(@PathVariable String isbn) {
+        return ResponseEntity.ok(new ResponseMessage(bookService.deleteBook(isbn)));
+    }
+
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Book> updateBook(@RequestBody Book book) {
+        return ResponseEntity.ok(bookService.updateBook(book));
     }
 }

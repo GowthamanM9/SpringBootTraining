@@ -38,4 +38,21 @@ public class BookService {
             return bookRepository.save(book);
         }
     }
+
+    public String deleteBook(String isbn){
+        if(bookRepository.existsById(isbn)){
+            bookRepository.deleteById(isbn);
+            return "Book with ISBN: " + isbn + " deleted successfully";
+        } else {
+            throw new BookNotExistException("Book with " + isbn + " not found.");
+        }
+    }
+
+    public Book updateBook(Book book){
+        if(bookRepository.existsById(book.getIsbn())){
+            return bookRepository.save(book);
+        } else{
+            throw new BookNotExistException("Book with " + book.getIsbn() + " not found.");
+        }
+    }
 }
