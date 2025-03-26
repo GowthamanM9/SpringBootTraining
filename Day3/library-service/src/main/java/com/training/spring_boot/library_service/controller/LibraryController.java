@@ -19,7 +19,7 @@ public class LibraryController {
 
     @GetMapping(path="/book/{isbn}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<BookDto> locateBook(@PathVariable String isbn) {
-        BookDto book = this.restClientBuilder.build().get().uri("http://localhost:8080/books/{isbn}", isbn)
+        BookDto book = this.restClientBuilder.build().get().uri("http://book-service/books/{isbn}", isbn)
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .body(BookDto.class);
