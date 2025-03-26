@@ -16,3 +16,7 @@ Day3/rest-client/mvnw.cmd
 Day3/rest-client/.mvn/wrapper/maven-wrapper.properties
 Day3/rest-client/mvnw
 Day3/rest-client/.gitattributes
+Day3/library-service/mvnw
+Day3/library-service/mvnw.cmd
+Day3/library-service/.mvn/wrapper/maven-wrapper.properties
+Day3/library-service/.gitattributes

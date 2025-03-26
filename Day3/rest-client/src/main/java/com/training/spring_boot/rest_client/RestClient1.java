@@ -11,7 +11,7 @@ import java.util.List;
 public class RestClient1 {
     public static void main(String[] args) {
         RestTemplate restTemplate = new RestTemplate();
-        String url = "http://localhost:8080/book";
+        String url = "http://localhost:8080/books";
         String response = restTemplate.getForObject(url, String.class);
         System.out.println(response);
 
