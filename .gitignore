@@ -20,3 +20,7 @@ Day3/library-service/mvnw
 Day3/library-service/mvnw.cmd
 Day3/library-service/.mvn/wrapper/maven-wrapper.properties
 Day3/library-service/.gitattributes
+Day3/eureka-server/.gitattributes
+Day3/eureka-server/.mvn/wrapper/maven-wrapper.properties
+Day3/eureka-server/mvnw
+Day3/eureka-server/mvnw.cmd
