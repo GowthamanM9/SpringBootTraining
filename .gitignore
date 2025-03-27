@@ -63,3 +63,7 @@ Day4/api-gateway/.gitattributes
 Day4/api-gateway/.mvn/wrapper/maven-wrapper.properties
 Day4/api-gateway/mvnw
 Day4/api-gateway/mvnw.cmd
+Day4/rest-client/.gitattributes
+Day4/rest-client/.mvn/wrapper/maven-wrapper.properties
+Day4/rest-client/mvnw
+Day4/rest-client/mvnw.cmd
