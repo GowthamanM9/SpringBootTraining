@@ -1,0 +1,27 @@
+server:
+  port: 8070
+
+spring:
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: book-service
+            uri: lb://book-service
+            predicates:
+              - Path=/books/**
+          - id: library-service
+            uri: lb://library-service
+            predicates:
+              - Path=/libraries/**
+          - id: test-service
+            uri: https://www.google.com/
+            predicates:
+              - Path=/redirect/**
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

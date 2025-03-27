@@ -24,3 +24,42 @@ Day3/eureka-server/.gitattributes
 Day3/eureka-server/.mvn/wrapper/maven-wrapper.properties
 Day3/eureka-server/mvnw
 Day3/eureka-server/mvnw.cmd
+
+@ -0,0 +1,33 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+Day4/api-gateway/.gitattributes
+Day4/api-gateway/.mvn/wrapper/maven-wrapper.properties
+Day4/api-gateway/mvnw
+Day4/api-gateway/mvnw.cmd
