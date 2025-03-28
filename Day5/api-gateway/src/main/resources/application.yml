@@ -30,7 +30,7 @@ spring:
         registration:
           keycloak:
             client-id: api-gateway-app
-            client-secret: lUmk23i0vbT8AAiMlAKP4Dfhqbr8LBb2
+            client-secret: lUmk23i0vbT8AAiMlAKP4Dfhqbr8LBb2 # replace with your secret after setting up Keycloak in your local
             authorization-grant-type: authorization_code
             scope: openid, profile, email
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
