@@ -1,0 +1,64 @@
+server:
+  port: 8071
+
+spring:
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: book-service
+            uri: lb://book-service
+            predicates:
+              - Path=/books/**
+          - id: library-service
+            uri: lb://library-service
+            predicates:
+              - Path=/libraries/**
+            filters:
+              - name: CircuitBreaker
+                args:
+                  id: library
+                  name: backendB
+                  fallbackUri: forward:/library-fallback
+          - id: test-service
+            uri: https://www.google.com/
+            predicates:
+              - Path=/redirect/**
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: api-gateway-app
+            client-secret: lUmk23i0vbT8AAiMlAKP4Dfhqbr8LBb2
+            authorization-grant-type: authorization_code
+            scope: openid, profile, email
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8180/realms/myrealm
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+resilience4j.circuitbreaker:
+  instances:
+    backendB:
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 3
+      slidingWindowType: COUNT_BASED
+      minimumNumberOfCalls: 15
+      waitDurationInOpenState: 30s
+      failureRateThreshold: 40
+      eventConsumerBufferSize: 10
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+
+logging:
+  level:
+    '[org.springframework.security]': debug
+    '[org.springframework]': error

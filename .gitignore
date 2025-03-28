@@ -67,3 +67,5 @@ Day4/rest-client/.gitattributes
 Day4/rest-client/.mvn/wrapper/maven-wrapper.properties
 Day4/rest-client/mvnw
 Day4/rest-client/mvnw.cmd
+Day5/api-gateway/.mvn/wrapper/maven-wrapper.properties
+Day5/api-gateway/pom.xml
